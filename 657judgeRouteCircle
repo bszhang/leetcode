@@ -1,0 +1,27 @@
+class Solution {
+    public boolean judgeCircle(String moves) {
+        int count_r = 0;
+        int count_l = 0;
+        int count_u = 0;
+        int count_d = 0;
+        for(int i=0;i<moves.length();i++){
+             switch(moves.charAt(i)){
+                 case 'R' :
+                      count_r ++;
+                      break;
+                 case 'L' :
+                      count_l ++;
+                      break;
+                 case 'U' :
+                      count_u ++;
+                      break;
+                 case 'D' :
+                      count_d ++;
+                      break;     
+                 default :
+                      System.out.println("invalid char " + moves.charAt(i));
+             }    
+	}
+        return (count_u == count_d) && (count_r == count_l);
+    }
+}
